@@ -7,11 +7,11 @@ public class BinarySearch {
         Scanner sc = new Scanner(System.in);
         int n, str = 0, flag = 0,mid = 0;
         System.out.println("Enter the size of arrays and then the array ");
-        int[] arr = new int[sc.nextInt()];
-        for (int i = 0; i < arr.length; i++)
-            arr[i] = sc.nextInt();
+        int[] arr = new int[sc.nextInt()];                    // taking input of for initialization of array
+        for (int i = 0; i < arr.length; i++)    
+            arr[i] = sc.nextInt();                            //taking inputs in array
         System.out.println("Enter the number you need to find in the array: ");
-        n = sc.nextInt();
+        n = sc.nextInt();                                    //taking input for the number we want to search in the element
         int end =arr.length-1;
         while (str <= end)
         {
