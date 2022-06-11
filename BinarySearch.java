@@ -1,3 +1,5 @@
+// To perform a BINARY SEARCH in ascending sorted array
+
 import java.util.Scanner;
 
 public class BinarySearch {
