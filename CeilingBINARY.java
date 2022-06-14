@@ -8,9 +8,9 @@ public class CeilingBINARY {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("First Enter the size of array and then ascending sorted elements in the array: ");
-        int[] arr = new int[sc.nextInt()];
+        int[] arr = new int[sc.nextInt()];            //declaring the array of user defined size
         for (int i = 0; i < arr.length; i++)
-            arr[i] = sc.nextInt();
+            arr[i] = sc.nextInt();                    //initilization of the array with user defined sorted elements 
         System.out.print("Enter the number you want to find out in the array: ");
         int n = sc.nextInt();
         int start = 0, end = arr.length - 1, mid, flag;
