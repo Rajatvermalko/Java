@@ -35,6 +35,6 @@ public class FloorBINARY
              end=mid-1;
             }
         }
-            return 0;
+            return start;
         }
 }
