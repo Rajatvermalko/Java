@@ -38,8 +38,7 @@ public interface FirstLastElement
         int end = nums.length - 1;
         while (start <= end)
         {
-            // find the middle element
-            int mid = start + (end - start) / 2;
+            int mid = start + (end - start) / 2;                                         // find the middle element
             if (target < nums[mid])
             {
                 end = mid - 1;
@@ -60,6 +59,6 @@ public interface FirstLastElement
                 }
             }
         }
-        return ans;
+        return ans;                                                          //return the values
     }
 }
