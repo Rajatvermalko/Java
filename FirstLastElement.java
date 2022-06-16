@@ -1,4 +1,9 @@
-import java.util.Scanner;
+//WAP to find the given element in the array 
+//and give the first and last  position of its occurence
+//input {2,3,7,7,7,8,8,9} and 7
+//--> answer is {2,4}
+
+import java.util.Scanner;                                                     //import statement for util package
 
 public interface FirstLastElement
 {
