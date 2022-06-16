@@ -11,18 +11,18 @@ public interface FirstLastElement
     {
         Scanner sc = new Scanner(System.in);
         System.out.print("First Enter the size of array and then ascending sorted elements in the array: ");
-        int[] arr = new int[sc.nextInt()];
+        int[] arr = new int[sc.nextInt()];                                      //input the size of the array to declare
         for (int i = 0; i < arr.length; i++)
-            arr[i] = sc.nextInt();
+            arr[i] = sc.nextInt();                                              //input the elements in the array
         System.out.print("Enter the number you want to find out in the array: ");
-        int n = sc.nextInt();
+        int n = sc.nextInt();                                                   //user inputs the element to search in the array
         int[] answer={-1,-1};
-        answer = searchRange(arr, n);
+        answer = searchRange(arr, n);                                           //function calling to find the elements first and last position
         for (int a : answer)
-            System.out.print(a);
+            System.out.print(a);                                               //print the answer 
     }
 
-    static int[] searchRange(int[] nums, int target)
+    static int[] searchRange(int[] nums, int target)                           //function to catch the return and return the values
     {
         int[] ans = {-1, -1};
         // check for first occurrence if target first
