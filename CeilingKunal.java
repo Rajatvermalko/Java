@@ -1,10 +1,12 @@
-class CeilingKunal
+import java.util.Scanner;
+public class CeilingKunal
 {
 public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);
         System.out.print("First Enter the size of array and then ascending sorted elements in the array: ");
         int[] arr = new int[sc.nextInt()];            //declaring the array of user defined size
+         System.out.print("First Enter the ascending sorted elements in the array: ");
         for (int i = 0; i < arr.length; i++)
             arr[i] = sc.nextInt();                    //initilization of the array with user defined sorted elements 
         System.out.print("Enter the number you want to find out in the array: ");
@@ -21,5 +23,6 @@ public static void main(String[] args)
             else if (n < arr[mid])
                 end = mid - 1;
         }
-    System.out.println("The Ceilling number is found in the array at " + Start + " position");
+    System.out.println("The Ceilling number is found in the array at " + start + " position");
+}
 }
