@@ -1,3 +1,5 @@
+//WAP to find the ceiling number of a given number in the array
+//Kunal Kushwaha Videos type
 import java.util.Scanner;
 public class CeilingKunal
 {
