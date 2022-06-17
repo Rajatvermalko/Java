@@ -28,3 +28,4 @@ public static void main(String[] args)
     System.out.println("The Ceilling number is found in the array at " + start + " position");
 }
 }
+//not giving results...needs a fix
