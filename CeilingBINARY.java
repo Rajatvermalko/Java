@@ -20,7 +20,8 @@ public class CeilingBINARY
         for (int i = 0; i < arr.length; i++) 
         {
             mid = (start + (end - start)) / 2;
-            if (arr[mid] == n) System.out.println("The number " + n + " is found in the array at " + mid + " position");
+            if (arr[mid] == n)
+                System.out.println("The number " + n + " is found in the array at " + mid + " position");
             else if (n > arr[mid])
                 start = mid + 1;
             else if (n < arr[mid])
