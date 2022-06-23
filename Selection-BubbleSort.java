@@ -1,3 +1,7 @@
+//Wap to sort array by both selection and bubble sort method
+
+//You can choose to Sort array in selection and bubble sort method
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -13,15 +17,35 @@ public class SelecBubbleSort
         for (int i=0;i<len;i++) {
             arr[i]=sc.nextInt();
         }
-        int[] a = arr;                                                  
+        
+        System.out.print("Enter 0 to QUIT, ");
+        System.out.print("Enter 1 to sort array in Bubble Sort Method, ");
+        System.out.print("Enter 2 to sort array in Selection Sort Method: ");
+        int choice=sc.nextInt();
+        int[] a = arr;                                                        //Duplicating the array for two functons
+        if(choice==0)
+        { 
+            break;
+        }
+        else if(choice==1)
+        {
         System.out.print("Bubble Sort: ");
         int[] sorted=bubblesort(arr,len);
         System.out.println(Arrays.toString(sorted));
-
+        }
+        else if(choice==2)
+        {
         System.out.print("Selection Sort: ");
         int[] selesort=selectionsort(a,len);
         System.out.println(Arrays.toString(selesort));
+        }
+        else
+        {
+        System.out.print("INVALID INPUT ");
+        Break;
+        }
     }
+        
     static int[] selectionsort(int[] arr,int len)
     {
         for (int i = 0; i < len; i++)
