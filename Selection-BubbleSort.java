@@ -8,45 +8,50 @@ import java.util.Scanner;
 public class SelecBubbleSort
 {
     public static void main(String[] args)
+{
+    Scanner sc=new Scanner(System.in);
+    System.out.print("Enter 0 to QUIT, ");
+    System.out.print("Enter 1 to sort array in Bubble Sort Method, ");
+    System.out.print("Enter 2 to sort array in Selection Sort Method: ");
+    int inp=sc.nextInt();                                                               //USER enter his/her choice
+    System.out.print("Enter the length of the array: ");
+    int len=sc.nextInt();                                                                   //to length of the array
+    int []arr = new int[len];
+    System.out.print("Enter the array: ");
+    for (int i=0;i<len;i++)
     {
-        Scanner sc=new Scanner(System.in);
-        System.out.print("Enter the length of the array: ");
-        int len=sc.nextInt();                                                                   //to length of the array
-        int []arr = new int[len];
-        System.out.print("Enter the array: ");
-        for (int i=0;i<len;i++) 
-        {
-            arr[i]=sc.nextInt();                                                               //to input the elements in the array
-        }
-        
-        System.out.print("Enter 0 to QUIT, ");
-        System.out.print("Enter 1 to sort array in Bubble Sort Method, ");
-        System.out.print("Enter 2 to sort array in Selection Sort Method: ");
-        int choice=sc.nextInt();                                                              //USER enter his/her choice
+        arr[i]=sc.nextInt();                                                               //to input the elements in the array
+    }
+    choice(arr,len,inp);                                                                  //choice function will perform the desired task
+    }
+
+    public static void choice(int[] arr,int len,int choice)
+    {
+
         if(choice==0)                                                                         //CHOICE for SORT
-        { 
-            exit();
+        {
+            System.exit(0);                                                                    //exit when user chooses to quit 
         }
         else if(choice==1)
         {
-        System.out.print("Bubble Sort: ");
-        int[] sorted=bubblesort(arr,len);
-        System.out.println(Arrays.toString(sorted));
+            System.out.print("Bubble Sort: ");
+            int[] sorted=bubblesort(arr,len);
+            System.out.println(Arrays.toString(sorted));
         }
         else if(choice==2)
         {
-        System.out.print("Selection Sort: ");
-        int[] selesort=selectionsort(arr,len);
-        System.out.println(Arrays.toString(selesort));
+            System.out.print("Selection Sort: ");
+            int[] selesort=selectionsort(arr,len);
+            System.out.println(Arrays.toString(selesort));
         }
         else
         {
-        System.out.print("INVALID INPUT ");
-        exit();
+            System.out.print("INVALID INPUT ");
+            System.exit(0);
         }
+
     }
-        
-    static int[] selectionsort(int[] arr,int len)                                     //FUNCTION to sort the array in SELECTION SORT METHOD
+    static int[] selectionsort(int[] arr,int len)
     {
         for (int i = 0; i < len; i++)
         {
@@ -59,16 +64,12 @@ public class SelecBubbleSort
                     flag++;
                 }
             }
-            if (flag==0) 
-            {                                                                         //to break sorting when swapping does not occur for once
-                break;                                                                //it means it's already sorted so no more check is required
-        
-            }
+            if (flag==0)
+                break;
         }
     return arr;
     }
-
-    static int[] bubblesort(int[] arr,int len)                                        //FUNCTION to sort the array in BUBBLE SORT METHOD
+    static int[] bubblesort(int[] arr,int len)
     {
         for (int i=0;i<len;i++)
         {
@@ -81,17 +82,14 @@ public class SelecBubbleSort
                     flag++;
                 }
             }
-            if (flag==0) 
-            {
-                 break;                                                               //to break sorting when swapping does not occur for once
-             }                                                                        //it means it's already sorted so no more check is required
+            if (flag==0)
+                break;
         }
         return arr;
     }
 
-    
-    static void swap(int[]arr,int i,int j)                                           //FUNCTION to SWAP the array EITHER METHOD
-    {  
+    static void swap(int[]arr,int i,int j)
+    {
         int temp=arr[j];
         arr[j]=arr[i];
         arr[i]=temp;
