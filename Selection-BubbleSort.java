@@ -25,7 +25,7 @@ public class SelecBubbleSort
         int choice=sc.nextInt();                                                              //USER enter his/her choice
         if(choice==0)                                                                         //CHOICE for SORT
         { 
-            break;
+            exit();
         }
         else if(choice==1)
         {
@@ -42,7 +42,7 @@ public class SelecBubbleSort
         else
         {
         System.out.print("INVALID INPUT ");
-        Break;
+        exit();
         }
     }
         
