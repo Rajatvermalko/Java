@@ -23,7 +23,7 @@ public class SelecBubbleSort
         System.out.print("Enter 2 to sort array in Selection Sort Method: ");
         int choice=sc.nextInt();
         int[] a = arr;                                                        //Duplicating the array for two functons
-        if(choice==0)
+        if(choice==0)                                                         //CHOICE for SORT
         { 
             break;
         }
@@ -46,7 +46,7 @@ public class SelecBubbleSort
         }
     }
         
-    static int[] selectionsort(int[] arr,int len)
+    static int[] selectionsort(int[] arr,int len)                                     //FUNCTION to sort the array in SELECTION SORT METHOD
     {
         for (int i = 0; i < len; i++)
         {
@@ -64,7 +64,7 @@ public class SelecBubbleSort
         }
     return arr;
     }
-    static int[] bubblesort(int[] arr,int len)
+    static int[] bubblesort(int[] arr,int len)                                        //FUNCTION to sort the array in BUBBLE SORT METHOD
     {
         for (int i=0;i<len;i++)
         {
@@ -83,8 +83,8 @@ public class SelecBubbleSort
         return arr;
     }
 
-    static void swap(int[]arr,int i,int j)
-    {
+    static void swap(int[]arr,int i,int j)                                           //FUNCTION to SWAP the array EITHER METHOD
+    {  
         int temp=arr[j];
         arr[j]=arr[i];
         arr[i]=temp;
